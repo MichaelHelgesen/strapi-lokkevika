@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_hjem_heroes",
+  "info": {
+    "displayName": "Hero",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Tittel": {
+      "type": "string",
+      "required": true
+    },
+    "Introtekst": {
+      "type": "text"
+    },
+    "Bilde": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    }
+  }
+}

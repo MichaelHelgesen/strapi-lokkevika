@@ -1,0 +1,44 @@
+{
+  "kind": "collectionType",
+  "collectionName": "menies",
+  "info": {
+    "singularName": "meny",
+    "pluralName": "menies",
+    "displayName": "Meny",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Tittel": {
+      "type": "string",
+      "required": true
+    },
+    "Ikon": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "Varer": {
+      "type": "component",
+      "repeatable": true,
+      "component": "meny.vare"
+    },
+    "Bilde": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "rank": {
+      "type": "integer"
+    }
+  }
+}

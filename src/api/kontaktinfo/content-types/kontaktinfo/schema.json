@@ -1,0 +1,43 @@
+{
+  "kind": "singleType",
+  "collectionName": "kontaktinfos",
+  "info": {
+    "singularName": "kontaktinfo",
+    "pluralName": "kontaktinfos",
+    "displayName": "Kontaktinfo",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Bedriftsnavn": {
+      "type": "string"
+    },
+    "Gateadresse": {
+      "type": "string"
+    },
+    "Gatenummer": {
+      "type": "string"
+    },
+    "Postnummer": {
+      "type": "string"
+    },
+    "Poststed": {
+      "type": "string"
+    },
+    "Telefonnummer": {
+      "type": "string"
+    },
+    "Facebook_lenke": {
+      "type": "string"
+    },
+    "Instagram_lenke": {
+      "type": "string"
+    },
+    "Epost": {
+      "type": "email"
+    }
+  }
+}

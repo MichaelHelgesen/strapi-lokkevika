@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_hjem_tjenesteoversikts",
+  "info": {
+    "displayName": "Tjenesteoversikt"
+  },
+  "options": {},
+  "attributes": {
+    "Tittel": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

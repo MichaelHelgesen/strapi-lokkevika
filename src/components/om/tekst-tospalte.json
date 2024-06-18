@@ -1,0 +1,12 @@
+{
+  "collectionName": "components_om_tekst_tospaltes",
+  "info": {
+    "displayName": "Tekst_tospalte"
+  },
+  "options": {},
+  "attributes": {
+    "Tekst": {
+      "type": "richtext"
+    }
+  }
+}

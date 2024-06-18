@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_komponenter_topps",
+  "info": {
+    "displayName": "Topp",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Tittel": {
+      "type": "string",
+      "required": true
+    },
+    "Beskrivelse": {
+      "type": "text"
+    },
+    "Bakgrunnsbilde": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    }
+  }
+}

@@ -4,6 +4,9 @@ module.exports = ({ env }) => ({
       jwtSecret: env('JWT_SECRET'),
     },
   },
+  'drag-drop-content-types': {
+    enabled: true
+  },
   upload: {
     config: {
       provider: 'cloudinary',

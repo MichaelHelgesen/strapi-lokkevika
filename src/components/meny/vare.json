@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_meny_vares",
+  "info": {
+    "displayName": "vare",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Tittel": {
+      "type": "string",
+      "required": true
+    },
+    "Beskrivelse": {
+      "type": "richtext"
+    },
+    "Pris": {
+      "type": "integer"
+    },
+    "Bilde": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

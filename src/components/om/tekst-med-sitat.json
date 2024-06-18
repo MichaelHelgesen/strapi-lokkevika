@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_om_tekst_med_sitats",
+  "info": {
+    "displayName": "Tekst_med_sitat"
+  },
+  "options": {},
+  "attributes": {
+    "Tekst": {
+      "type": "richtext"
+    },
+    "Sitat": {
+      "type": "text"
+    },
+    "Bilde": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "Venstrejustert": {
+      "type": "boolean",
+      "default": true
+    }
+  }
+}

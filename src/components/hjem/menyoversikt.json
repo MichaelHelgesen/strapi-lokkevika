@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_hjem_menyoversikts",
+  "info": {
+    "displayName": "Menyoversikt"
+  },
+  "options": {},
+  "attributes": {
+    "Tittel": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

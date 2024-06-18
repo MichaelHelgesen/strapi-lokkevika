@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_hjem_motesteds",
+  "info": {
+    "displayName": "Møtested"
+  },
+  "options": {},
+  "attributes": {
+    "Tittel": {
+      "type": "string"
+    },
+    "Tekst": {
+      "type": "richtext"
+    },
+    "Bakgrunnsbilde": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    }
+  }
+}

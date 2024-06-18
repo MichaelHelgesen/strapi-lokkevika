@@ -1,0 +1,25 @@
+{
+  "kind": "singleType",
+  "collectionName": "side_leverandorers",
+  "info": {
+    "singularName": "side-leverandorer",
+    "pluralName": "side-leverandorers",
+    "displayName": "Side_leverandorer"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Topp": {
+      "type": "component",
+      "repeatable": false,
+      "component": "komponenter.topp"
+    },
+    "Leverandor": {
+      "type": "component",
+      "repeatable": true,
+      "component": "leverandorer.leverandor"
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_hjem_referanseoversikts",
+  "info": {
+    "displayName": "Referanseoversikt"
+  },
+  "options": {},
+  "attributes": {
+    "Tittel": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

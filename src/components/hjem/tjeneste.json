@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_hjem_tjenestes",
+  "info": {
+    "displayName": "Tjeneste"
+  },
+  "options": {},
+  "attributes": {
+    "Tittel": {
+      "type": "string",
+      "required": true
+    },
+    "Beskrivelse": {
+      "type": "text"
+    },
+    "Ikon": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    }
+  }
+}

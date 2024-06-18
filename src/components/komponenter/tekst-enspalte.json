@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_komponenter_tekst_enspaltes",
+  "info": {
+    "displayName": "Tekst_enspalte"
+  },
+  "options": {},
+  "attributes": {
+    "Tittel": {
+      "type": "string"
+    },
+    "Tekst": {
+      "type": "richtext"
+    }
+  }
+}

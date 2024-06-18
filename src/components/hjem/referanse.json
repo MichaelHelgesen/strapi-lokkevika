@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_hjem_referanses",
+  "info": {
+    "displayName": "Referanse"
+  },
+  "options": {},
+  "attributes": {
+    "Tittel": {
+      "type": "string",
+      "required": true
+    },
+    "Bilde": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    }
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "collectionName": "components_om_bilderads",
+  "info": {
+    "displayName": "Bilderad"
+  },
+  "options": {},
+  "attributes": {
+    "Bilde1": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    },
+    "Bilde2": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    },
+    "Bilde3": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    }
+  }
+}

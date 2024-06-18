@@ -1,0 +1,26 @@
+{
+  "kind": "singleType",
+  "collectionName": "side_apningstiders",
+  "info": {
+    "singularName": "side-apningstider",
+    "pluralName": "side-apningstiders",
+    "displayName": "Side_apningstider",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Topp": {
+      "type": "component",
+      "repeatable": false,
+      "component": "komponenter.topp"
+    },
+    "Tekst_enspalte": {
+      "type": "component",
+      "repeatable": false,
+      "component": "komponenter.tekst-enspalte"
+    }
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_om_tekst_pa_bildes",
+  "info": {
+    "displayName": "Tekst_på_bilde"
+  },
+  "options": {},
+  "attributes": {
+    "Tekst": {
+      "type": "richtext"
+    },
+    "Bilde": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    }
+  }
+}

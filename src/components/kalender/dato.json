@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_kalender_datoes",
+  "info": {
+    "displayName": "Dato"
+  },
+  "options": {},
+  "attributes": {
+    "Dato": {
+      "type": "integer"
+    },
+    "Tekst": {
+      "type": "text"
+    }
+  }
+}

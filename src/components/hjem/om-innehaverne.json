@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_hjem_om_innehavernes",
+  "info": {
+    "displayName": "Om innehaverne"
+  },
+  "options": {},
+  "attributes": {
+    "Tittel": {
+      "type": "string"
+    },
+    "Tekst": {
+      "type": "richtext"
+    }
+  }
+}

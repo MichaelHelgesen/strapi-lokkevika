@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_komponenter_bilde_fullbreddes",
+  "info": {
+    "displayName": "Bilde_fullbredde"
+  },
+  "options": {},
+  "attributes": {
+    "Bilde": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    }
+  }
+}

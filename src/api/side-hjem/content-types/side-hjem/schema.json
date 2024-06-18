@@ -1,0 +1,66 @@
+{
+  "kind": "singleType",
+  "collectionName": "side_hjems",
+  "info": {
+    "singularName": "side-hjem",
+    "pluralName": "side-hjems",
+    "displayName": "Side_hjem",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Hero": {
+      "type": "component",
+      "repeatable": false,
+      "component": "hjem.hero"
+    },
+    "Innehaverne": {
+      "type": "component",
+      "repeatable": false,
+      "component": "hjem.om-innehaverne"
+    },
+    "Bilde_Fullbredde": {
+      "type": "component",
+      "repeatable": false,
+      "component": "komponenter.bilde-fullbredde"
+    },
+    "Meny": {
+      "type": "component",
+      "repeatable": false,
+      "component": "hjem.menyoversikt"
+    },
+    "Salgspunkter": {
+      "type": "component",
+      "repeatable": false,
+      "component": "hjem.tjenesteoversikt"
+    },
+    "Referanser": {
+      "type": "component",
+      "repeatable": false,
+      "component": "hjem.referanseoversikt"
+    },
+    "Moteplass": {
+      "type": "component",
+      "repeatable": false,
+      "component": "hjem.motested"
+    },
+    "Tjeneste": {
+      "type": "component",
+      "repeatable": true,
+      "component": "hjem.tjeneste"
+    },
+    "Bilde_Fullbredde_2": {
+      "type": "component",
+      "repeatable": false,
+      "component": "komponenter.bilde-fullbredde"
+    },
+    "Referanse": {
+      "type": "component",
+      "repeatable": true,
+      "component": "hjem.referanse"
+    }
+  }
+}

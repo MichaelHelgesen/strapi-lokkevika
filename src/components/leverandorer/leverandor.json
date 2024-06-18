@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_leverandorer_leverandors",
+  "info": {
+    "displayName": "Leverandor"
+  },
+  "options": {},
+  "attributes": {
+    "Tittel": {
+      "type": "string",
+      "required": true
+    },
+    "Tekst": {
+      "type": "richtext"
+    },
+    "Lenke_til_leverandor": {
+      "type": "string"
+    },
+    "Bilde": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    }
+  }
+}

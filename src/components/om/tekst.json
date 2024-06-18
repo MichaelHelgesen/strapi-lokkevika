@@ -1,0 +1,12 @@
+{
+  "collectionName": "components_om_teksts",
+  "info": {
+    "displayName": "Tekst"
+  },
+  "options": {},
+  "attributes": {
+    "Tekst_enspalte": {
+      "type": "richtext"
+    }
+  }
+}

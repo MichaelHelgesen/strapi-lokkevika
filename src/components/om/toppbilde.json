@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_om_toppbildes",
+  "info": {
+    "displayName": "Toppbilde"
+  },
+  "options": {},
+  "attributes": {
+    "Tittel": {
+      "type": "string",
+      "required": true
+    },
+    "Bakgrunnsbilde": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    }
+  }
+}

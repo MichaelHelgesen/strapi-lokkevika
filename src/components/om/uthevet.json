@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_om_uthevets",
+  "info": {
+    "displayName": "Uthevet"
+  },
+  "options": {},
+  "attributes": {
+    "Tittel": {
+      "type": "string"
+    },
+    "Tekst": {
+      "type": "richtext"
+    },
+    "Bilde": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    }
+  }
+}

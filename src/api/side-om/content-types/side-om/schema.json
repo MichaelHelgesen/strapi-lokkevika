@@ -1,0 +1,66 @@
+{
+  "kind": "singleType",
+  "collectionName": "side_oms",
+  "info": {
+    "singularName": "side-om",
+    "pluralName": "side-oms",
+    "displayName": "Side_om",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Topp": {
+      "type": "component",
+      "repeatable": false,
+      "component": "komponenter.topp"
+    },
+    "Bilde_topp": {
+      "type": "component",
+      "repeatable": false,
+      "component": "om.toppbilde"
+    },
+    "Tospalte": {
+      "type": "component",
+      "repeatable": false,
+      "component": "om.tekst-tospalte"
+    },
+    "Bilderad1": {
+      "type": "component",
+      "repeatable": false,
+      "component": "om.bilderad"
+    },
+    "Tekst_med_sitat": {
+      "type": "component",
+      "repeatable": false,
+      "component": "om.tekst-med-sitat"
+    },
+    "Fremhevet_tekst": {
+      "type": "component",
+      "repeatable": false,
+      "component": "om.uthevet"
+    },
+    "Tekst_med_sitat2": {
+      "type": "component",
+      "repeatable": false,
+      "component": "om.tekst-med-sitat"
+    },
+    "Tekst_enspalte": {
+      "type": "component",
+      "repeatable": false,
+      "component": "om.tekst-tospalte"
+    },
+    "Bilderad2": {
+      "type": "component",
+      "repeatable": false,
+      "component": "om.bilderad"
+    },
+    "Tekst_pa_bilde": {
+      "type": "component",
+      "repeatable": false,
+      "component": "om.tekst-pa-bilde"
+    }
+  }
+}
