@@ -61,6 +61,12 @@
       "type": "component",
       "repeatable": false,
       "component": "om.tekst-pa-bilde"
+    },
+    "metadata": {
+      "type": "component",
+      "repeatable": false,
+      "component": "metadata.metadata",
+      "required": true
     }
   }
 }

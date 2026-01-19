@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_metadata_metadata",
+  "info": {
+    "displayName": "metadata",
+    "icon": "search"
+  },
+  "options": {},
+  "attributes": {
+    "Metatittel": {
+      "type": "string"
+    },
+    "Metabeskrivelse": {
+      "type": "string"
+    },
+    "Metabilde": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    }
+  }
+}

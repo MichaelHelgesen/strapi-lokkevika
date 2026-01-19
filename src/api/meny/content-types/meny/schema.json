@@ -39,6 +39,9 @@
     },
     "rank": {
       "type": "integer"
+    },
+    "Beskrivelse": {
+      "type": "text"
     }
   }
 }

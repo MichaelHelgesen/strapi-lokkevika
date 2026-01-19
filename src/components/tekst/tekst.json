@@ -1,0 +1,38 @@
+{
+  "collectionName": "components_tekst_teksts",
+  "info": {
+    "displayName": "Tekst",
+    "icon": "feather",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Tittel": {
+      "type": "string"
+    },
+    "Fil": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "videos",
+        "audios",
+        "files"
+      ]
+    },
+    "beskrivelse": {
+      "type": "richtext"
+    },
+    "Bilde": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

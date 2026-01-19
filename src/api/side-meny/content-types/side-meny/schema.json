@@ -4,7 +4,8 @@
   "info": {
     "singularName": "side-meny",
     "pluralName": "side-menies",
-    "displayName": "Side_meny"
+    "displayName": "Side_meny",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -15,6 +16,12 @@
       "type": "component",
       "repeatable": false,
       "component": "komponenter.topp"
+    },
+    "metadata": {
+      "type": "component",
+      "repeatable": false,
+      "component": "metadata.metadata",
+      "required": true
     }
   }
 }

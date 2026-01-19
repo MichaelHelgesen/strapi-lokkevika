@@ -906,6 +906,7 @@ export interface ApiMenyMeny extends Schema.CollectionType {
     Varer: Attribute.Component<'meny.vare', true>;
     Bilde: Attribute.Media & Attribute.Required;
     rank: Attribute.Integer;
+    Beskrivelse: Attribute.Text;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -930,6 +931,7 @@ export interface ApiSideApningstiderSideApningstider extends Schema.SingleType {
   attributes: {
     Topp: Attribute.Component<'komponenter.topp'>;
     Tekst_enspalte: Attribute.Component<'komponenter.tekst-enspalte'>;
+    metadata: Attribute.Component<'metadata.metadata'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -970,6 +972,7 @@ export interface ApiSideHjemSideHjem extends Schema.SingleType {
     Tjeneste: Attribute.Component<'hjem.tjeneste', true>;
     Bilde_Fullbredde_2: Attribute.Component<'komponenter.bilde-fullbredde'>;
     Referanse: Attribute.Component<'hjem.referanse', true>;
+    metadata: Attribute.Component<'metadata.metadata'> & Attribute.Required;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -994,6 +997,7 @@ export interface ApiSideKontaktSideKontakt extends Schema.SingleType {
     singularName: 'side-kontakt';
     pluralName: 'side-kontakts';
     displayName: 'Side_kontakt';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -1001,6 +1005,7 @@ export interface ApiSideKontaktSideKontakt extends Schema.SingleType {
   attributes: {
     Topp: Attribute.Component<'komponenter.topp'>;
     Tekst: Attribute.Component<'komponenter.tekst-enspalte'>;
+    metadata: Attribute.Component<'metadata.metadata'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1025,6 +1030,7 @@ export interface ApiSideLeverandorerSideLeverandorer extends Schema.SingleType {
     singularName: 'side-leverandorer';
     pluralName: 'side-leverandorers';
     displayName: 'Side_leverandorer';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -1032,6 +1038,7 @@ export interface ApiSideLeverandorerSideLeverandorer extends Schema.SingleType {
   attributes: {
     Topp: Attribute.Component<'komponenter.topp'>;
     Leverandor: Attribute.Component<'leverandorer.leverandor', true>;
+    metadata: Attribute.Component<'metadata.metadata'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1050,18 +1057,54 @@ export interface ApiSideLeverandorerSideLeverandorer extends Schema.SingleType {
   };
 }
 
-export interface ApiSideMenySideMeny extends Schema.SingleType {
-  collectionName: 'side_menies';
+export interface ApiSideLokkevikaHageSideLokkevikaHage
+  extends Schema.SingleType {
+  collectionName: 'side_lokkevika_hages';
   info: {
-    singularName: 'side-meny';
-    pluralName: 'side-menies';
-    displayName: 'Side_meny';
+    singularName: 'side-lokkevika-hage';
+    pluralName: 'side-lokkevika-hages';
+    displayName: 'Side_lokkevika_hage';
+    description: '';
   };
   options: {
     draftAndPublish: true;
   };
   attributes: {
     Topp: Attribute.Component<'komponenter.topp'>;
+    Tekst: Attribute.Component<'tekst.tekst'>;
+    metadata: Attribute.Component<'metadata.meta'>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::side-lokkevika-hage.side-lokkevika-hage',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::side-lokkevika-hage.side-lokkevika-hage',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiSideMenySideMeny extends Schema.SingleType {
+  collectionName: 'side_menies';
+  info: {
+    singularName: 'side-meny';
+    pluralName: 'side-menies';
+    displayName: 'Side_meny';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Topp: Attribute.Component<'komponenter.topp'>;
+    metadata: Attribute.Component<'metadata.metadata'> & Attribute.Required;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1102,6 +1145,7 @@ export interface ApiSideOmSideOm extends Schema.SingleType {
     Tekst_enspalte: Attribute.Component<'om.tekst-tospalte'>;
     Bilderad2: Attribute.Component<'om.bilderad'>;
     Tekst_pa_bilde: Attribute.Component<'om.tekst-pa-bilde'>;
+    metadata: Attribute.Component<'metadata.metadata'> & Attribute.Required;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1146,6 +1190,7 @@ declare module '@strapi/types' {
       'api::side-hjem.side-hjem': ApiSideHjemSideHjem;
       'api::side-kontakt.side-kontakt': ApiSideKontaktSideKontakt;
       'api::side-leverandorer.side-leverandorer': ApiSideLeverandorerSideLeverandorer;
+      'api::side-lokkevika-hage.side-lokkevika-hage': ApiSideLokkevikaHageSideLokkevikaHage;
       'api::side-meny.side-meny': ApiSideMenySideMeny;
       'api::side-om.side-om': ApiSideOmSideOm;
     }

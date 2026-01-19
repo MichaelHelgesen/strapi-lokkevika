@@ -4,7 +4,8 @@
   "info": {
     "singularName": "side-leverandorer",
     "pluralName": "side-leverandorers",
-    "displayName": "Side_leverandorer"
+    "displayName": "Side_leverandorer",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -20,6 +21,11 @@
       "type": "component",
       "repeatable": true,
       "component": "leverandorer.leverandor"
+    },
+    "metadata": {
+      "type": "component",
+      "repeatable": false,
+      "component": "metadata.metadata"
     }
   }
 }

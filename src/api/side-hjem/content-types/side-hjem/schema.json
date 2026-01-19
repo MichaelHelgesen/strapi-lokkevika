@@ -61,6 +61,13 @@
       "type": "component",
       "repeatable": true,
       "component": "hjem.referanse"
+    },
+    "metadata": {
+      "displayName": "metadata",
+      "type": "component",
+      "repeatable": false,
+      "component": "metadata.metadata",
+      "required": true
     }
   }
 }

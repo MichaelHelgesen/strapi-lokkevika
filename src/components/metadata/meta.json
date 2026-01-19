@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_metadata_metas",
+  "info": {
+    "displayName": "Meta",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Metatittel": {
+      "type": "string"
+    },
+    "Metabeskrivelse": {
+      "type": "text"
+    },
+    "Metabilde": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    }
+  }
+}

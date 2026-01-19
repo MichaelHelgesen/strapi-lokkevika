@@ -21,6 +21,11 @@
       "type": "component",
       "repeatable": false,
       "component": "komponenter.tekst-enspalte"
+    },
+    "metadata": {
+      "type": "component",
+      "repeatable": false,
+      "component": "metadata.metadata"
     }
   }
 }

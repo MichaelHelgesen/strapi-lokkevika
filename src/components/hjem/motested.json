@@ -1,7 +1,8 @@
 {
   "collectionName": "components_hjem_motesteds",
   "info": {
-    "displayName": "Møtested"
+    "displayName": "Møtested",
+    "description": ""
   },
   "options": {},
   "attributes": {
@@ -11,7 +12,39 @@
     "Tekst": {
       "type": "richtext"
     },
-    "Bakgrunnsbilde": {
+    "Bilde1": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    },
+    "Bilde2": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    },
+    "Bilde3": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    },
+    "Bilde4": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    },
+    "Bilde5": {
       "allowedTypes": [
         "images"
       ],

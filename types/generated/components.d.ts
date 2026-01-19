@@ -27,11 +27,16 @@ export interface HjemMotested extends Schema.Component {
   collectionName: 'components_hjem_motesteds';
   info: {
     displayName: 'M\u00F8tested';
+    description: '';
   };
   attributes: {
     Tittel: Attribute.String;
     Tekst: Attribute.RichText;
-    Bakgrunnsbilde: Attribute.Media & Attribute.Required;
+    Bilde1: Attribute.Media & Attribute.Required;
+    Bilde2: Attribute.Media & Attribute.Required;
+    Bilde3: Attribute.Media & Attribute.Required;
+    Bilde4: Attribute.Media & Attribute.Required;
+    Bilde5: Attribute.Media & Attribute.Required;
   };
 }
 
@@ -161,6 +166,32 @@ export interface MenyVare extends Schema.Component {
   };
 }
 
+export interface MetadataMeta extends Schema.Component {
+  collectionName: 'components_metadata_metas';
+  info: {
+    displayName: 'Meta';
+    description: '';
+  };
+  attributes: {
+    Metatittel: Attribute.String;
+    Metabeskrivelse: Attribute.Text;
+    Metabilde: Attribute.Media;
+  };
+}
+
+export interface MetadataMetadata extends Schema.Component {
+  collectionName: 'components_metadata_metadata';
+  info: {
+    displayName: 'metadata';
+    icon: 'search';
+  };
+  attributes: {
+    Metatittel: Attribute.String;
+    Metabeskrivelse: Attribute.String;
+    Metabilde: Attribute.Media;
+  };
+}
+
 export interface OmBilderad extends Schema.Component {
   collectionName: 'components_om_bilderads';
   info: {
@@ -240,6 +271,21 @@ export interface OmUthevet extends Schema.Component {
   };
 }
 
+export interface TekstTekst extends Schema.Component {
+  collectionName: 'components_tekst_teksts';
+  info: {
+    displayName: 'Tekst';
+    icon: 'feather';
+    description: '';
+  };
+  attributes: {
+    Tittel: Attribute.String;
+    Fil: Attribute.Media;
+    beskrivelse: Attribute.RichText;
+    Bilde: Attribute.Media;
+  };
+}
+
 declare module '@strapi/types' {
   export module Shared {
     export interface Components {
@@ -257,6 +303,8 @@ declare module '@strapi/types' {
       'komponenter.topp': KomponenterTopp;
       'leverandorer.leverandor': LeverandorerLeverandor;
       'meny.vare': MenyVare;
+      'metadata.meta': MetadataMeta;
+      'metadata.metadata': MetadataMetadata;
       'om.bilderad': OmBilderad;
       'om.tekst-med-sitat': OmTekstMedSitat;
       'om.tekst-pa-bilde': OmTekstPaBilde;
@@ -264,6 +312,7 @@ declare module '@strapi/types' {
       'om.tekst': OmTekst;
       'om.toppbilde': OmToppbilde;
       'om.uthevet': OmUthevet;
+      'tekst.tekst': TekstTekst;
     }
   }
 }
