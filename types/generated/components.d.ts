@@ -1,15 +1,15 @@
-import type { Schema, Attribute } from '@strapi/strapi';
+import type { Attribute, Schema } from '@strapi/strapi';
 
 export interface HjemHero extends Schema.Component {
   collectionName: 'components_hjem_heroes';
   info: {
-    displayName: 'Hero';
     description: '';
+    displayName: 'Hero';
   };
   attributes: {
-    Tittel: Attribute.String & Attribute.Required;
+    Bilde: Attribute.Media<'images'> & Attribute.Required;
     Introtekst: Attribute.Text;
-    Bilde: Attribute.Media & Attribute.Required;
+    Tittel: Attribute.String & Attribute.Required;
   };
 }
 
@@ -26,17 +26,17 @@ export interface HjemMenyoversikt extends Schema.Component {
 export interface HjemMotested extends Schema.Component {
   collectionName: 'components_hjem_motesteds';
   info: {
-    displayName: 'M\u00F8tested';
     description: '';
+    displayName: 'M\u00F8tested';
   };
   attributes: {
-    Tittel: Attribute.String;
+    Bilde1: Attribute.Media<'images'> & Attribute.Required;
+    Bilde2: Attribute.Media<'images'> & Attribute.Required;
+    Bilde3: Attribute.Media<'images'> & Attribute.Required;
+    Bilde4: Attribute.Media<'images'> & Attribute.Required;
+    Bilde5: Attribute.Media<'images'> & Attribute.Required;
     Tekst: Attribute.RichText;
-    Bilde1: Attribute.Media & Attribute.Required;
-    Bilde2: Attribute.Media & Attribute.Required;
-    Bilde3: Attribute.Media & Attribute.Required;
-    Bilde4: Attribute.Media & Attribute.Required;
-    Bilde5: Attribute.Media & Attribute.Required;
+    Tittel: Attribute.String;
   };
 }
 
@@ -46,8 +46,8 @@ export interface HjemOmInnehaverne extends Schema.Component {
     displayName: 'Om innehaverne';
   };
   attributes: {
-    Tittel: Attribute.String;
     Tekst: Attribute.RichText;
+    Tittel: Attribute.String;
   };
 }
 
@@ -57,8 +57,8 @@ export interface HjemReferanse extends Schema.Component {
     displayName: 'Referanse';
   };
   attributes: {
+    Bilde: Attribute.Media<'images'> & Attribute.Required;
     Tittel: Attribute.String & Attribute.Required;
-    Bilde: Attribute.Media & Attribute.Required;
   };
 }
 
@@ -78,9 +78,9 @@ export interface HjemTjeneste extends Schema.Component {
     displayName: 'Tjeneste';
   };
   attributes: {
-    Tittel: Attribute.String & Attribute.Required;
     Beskrivelse: Attribute.Text;
-    Ikon: Attribute.Media & Attribute.Required;
+    Ikon: Attribute.Media<'images'> & Attribute.Required;
+    Tittel: Attribute.String & Attribute.Required;
   };
 }
 
@@ -111,7 +111,7 @@ export interface KomponenterBildeFullbredde extends Schema.Component {
     displayName: 'Bilde_fullbredde';
   };
   attributes: {
-    Bilde: Attribute.Media & Attribute.Required;
+    Bilde: Attribute.Media<'images'> & Attribute.Required;
   };
 }
 
@@ -121,21 +121,21 @@ export interface KomponenterTekstEnspalte extends Schema.Component {
     displayName: 'Tekst_enspalte';
   };
   attributes: {
-    Tittel: Attribute.String;
     Tekst: Attribute.RichText;
+    Tittel: Attribute.String;
   };
 }
 
 export interface KomponenterTopp extends Schema.Component {
   collectionName: 'components_komponenter_topps';
   info: {
-    displayName: 'Topp';
     description: '';
+    displayName: 'Topp';
   };
   attributes: {
-    Tittel: Attribute.String & Attribute.Required;
+    Bakgrunnsbilde: Attribute.Media<'images'> & Attribute.Required;
     Beskrivelse: Attribute.Text;
-    Bakgrunnsbilde: Attribute.Media & Attribute.Required;
+    Tittel: Attribute.String & Attribute.Required;
   };
 }
 
@@ -145,37 +145,37 @@ export interface LeverandorerLeverandor extends Schema.Component {
     displayName: 'Leverandor';
   };
   attributes: {
-    Tittel: Attribute.String & Attribute.Required;
-    Tekst: Attribute.RichText;
+    Bilde: Attribute.Media<'images'> & Attribute.Required;
     Lenke_til_leverandor: Attribute.String;
-    Bilde: Attribute.Media & Attribute.Required;
+    Tekst: Attribute.RichText;
+    Tittel: Attribute.String & Attribute.Required;
   };
 }
 
 export interface MenyVare extends Schema.Component {
   collectionName: 'components_meny_vares';
   info: {
-    displayName: 'vare';
     description: '';
+    displayName: 'vare';
   };
   attributes: {
-    Tittel: Attribute.String & Attribute.Required;
     Beskrivelse: Attribute.RichText;
+    Bilde: Attribute.Media<'images'>;
     Pris: Attribute.Integer;
-    Bilde: Attribute.Media;
+    Tittel: Attribute.String & Attribute.Required;
   };
 }
 
 export interface MetadataMeta extends Schema.Component {
   collectionName: 'components_metadata_metas';
   info: {
-    displayName: 'Meta';
     description: '';
+    displayName: 'Meta';
   };
   attributes: {
-    Metatittel: Attribute.String;
     Metabeskrivelse: Attribute.Text;
-    Metabilde: Attribute.Media;
+    Metabilde: Attribute.Media<'images', true>;
+    Metatittel: Attribute.String;
   };
 }
 
@@ -186,9 +186,9 @@ export interface MetadataMetadata extends Schema.Component {
     icon: 'search';
   };
   attributes: {
-    Metatittel: Attribute.String;
     Metabeskrivelse: Attribute.String;
-    Metabilde: Attribute.Media;
+    Metabilde: Attribute.Media<'images' | 'files' | 'videos' | 'audios', true>;
+    Metatittel: Attribute.String;
   };
 }
 
@@ -198,43 +198,9 @@ export interface OmBilderad extends Schema.Component {
     displayName: 'Bilderad';
   };
   attributes: {
-    Bilde1: Attribute.Media & Attribute.Required;
-    Bilde2: Attribute.Media & Attribute.Required;
-    Bilde3: Attribute.Media & Attribute.Required;
-  };
-}
-
-export interface OmTekstMedSitat extends Schema.Component {
-  collectionName: 'components_om_tekst_med_sitats';
-  info: {
-    displayName: 'Tekst_med_sitat';
-  };
-  attributes: {
-    Tekst: Attribute.RichText;
-    Sitat: Attribute.Text;
-    Bilde: Attribute.Media;
-    Venstrejustert: Attribute.Boolean & Attribute.DefaultTo<true>;
-  };
-}
-
-export interface OmTekstPaBilde extends Schema.Component {
-  collectionName: 'components_om_tekst_pa_bildes';
-  info: {
-    displayName: 'Tekst_p\u00E5_bilde';
-  };
-  attributes: {
-    Tekst: Attribute.RichText;
-    Bilde: Attribute.Media & Attribute.Required;
-  };
-}
-
-export interface OmTekstTospalte extends Schema.Component {
-  collectionName: 'components_om_tekst_tospaltes';
-  info: {
-    displayName: 'Tekst_tospalte';
-  };
-  attributes: {
-    Tekst: Attribute.RichText;
+    Bilde1: Attribute.Media<'images'> & Attribute.Required;
+    Bilde2: Attribute.Media<'images'> & Attribute.Required;
+    Bilde3: Attribute.Media<'images'> & Attribute.Required;
   };
 }
 
@@ -248,14 +214,48 @@ export interface OmTekst extends Schema.Component {
   };
 }
 
+export interface OmTekstMedSitat extends Schema.Component {
+  collectionName: 'components_om_tekst_med_sitats';
+  info: {
+    displayName: 'Tekst_med_sitat';
+  };
+  attributes: {
+    Bilde: Attribute.Media<'images'>;
+    Sitat: Attribute.Text;
+    Tekst: Attribute.RichText;
+    Venstrejustert: Attribute.Boolean & Attribute.DefaultTo<true>;
+  };
+}
+
+export interface OmTekstPaBilde extends Schema.Component {
+  collectionName: 'components_om_tekst_pa_bildes';
+  info: {
+    displayName: 'Tekst_p\u00E5_bilde';
+  };
+  attributes: {
+    Bilde: Attribute.Media<'images'> & Attribute.Required;
+    Tekst: Attribute.RichText;
+  };
+}
+
+export interface OmTekstTospalte extends Schema.Component {
+  collectionName: 'components_om_tekst_tospaltes';
+  info: {
+    displayName: 'Tekst_tospalte';
+  };
+  attributes: {
+    Tekst: Attribute.RichText;
+  };
+}
+
 export interface OmToppbilde extends Schema.Component {
   collectionName: 'components_om_toppbildes';
   info: {
     displayName: 'Toppbilde';
   };
   attributes: {
+    Bakgrunnsbilde: Attribute.Media<'images'> & Attribute.Required;
     Tittel: Attribute.String & Attribute.Required;
-    Bakgrunnsbilde: Attribute.Media & Attribute.Required;
   };
 }
 
@@ -265,24 +265,24 @@ export interface OmUthevet extends Schema.Component {
     displayName: 'Uthevet';
   };
   attributes: {
-    Tittel: Attribute.String;
+    Bilde: Attribute.Media<'images'> & Attribute.Required;
     Tekst: Attribute.RichText;
-    Bilde: Attribute.Media & Attribute.Required;
+    Tittel: Attribute.String;
   };
 }
 
 export interface TekstTekst extends Schema.Component {
   collectionName: 'components_tekst_teksts';
   info: {
+    description: '';
     displayName: 'Tekst';
     icon: 'feather';
-    description: '';
   };
   attributes: {
-    Tittel: Attribute.String;
-    Fil: Attribute.Media;
     beskrivelse: Attribute.RichText;
-    Bilde: Attribute.Media;
+    Bilde: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    Fil: Attribute.Media<'images' | 'videos' | 'audios' | 'files'>;
+    Tittel: Attribute.String;
   };
 }
 
@@ -306,10 +306,10 @@ declare module '@strapi/types' {
       'metadata.meta': MetadataMeta;
       'metadata.metadata': MetadataMetadata;
       'om.bilderad': OmBilderad;
+      'om.tekst': OmTekst;
       'om.tekst-med-sitat': OmTekstMedSitat;
       'om.tekst-pa-bilde': OmTekstPaBilde;
       'om.tekst-tospalte': OmTekstTospalte;
-      'om.tekst': OmTekst;
       'om.toppbilde': OmToppbilde;
       'om.uthevet': OmUthevet;
       'tekst.tekst': TekstTekst;
