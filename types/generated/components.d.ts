@@ -1,277 +1,282 @@
-import type { Attribute, Schema } from '@strapi/strapi';
+import type { Schema, Struct } from '@strapi/strapi';
 
-export interface HjemHero extends Schema.Component {
+export interface HjemHero extends Struct.ComponentSchema {
   collectionName: 'components_hjem_heroes';
   info: {
     description: '';
     displayName: 'Hero';
   };
   attributes: {
-    Bilde: Attribute.Media<'images'> & Attribute.Required;
-    Introtekst: Attribute.Text;
-    Tittel: Attribute.String & Attribute.Required;
+    Bilde: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
+    Introtekst: Schema.Attribute.Text;
+    Tittel: Schema.Attribute.String & Schema.Attribute.Required;
   };
 }
 
-export interface HjemMenyoversikt extends Schema.Component {
+export interface HjemMenyoversikt extends Struct.ComponentSchema {
   collectionName: 'components_hjem_menyoversikts';
   info: {
     displayName: 'Menyoversikt';
   };
   attributes: {
-    Tittel: Attribute.String & Attribute.Required;
+    Tittel: Schema.Attribute.String & Schema.Attribute.Required;
   };
 }
 
-export interface HjemMotested extends Schema.Component {
+export interface HjemMotested extends Struct.ComponentSchema {
   collectionName: 'components_hjem_motesteds';
   info: {
     description: '';
     displayName: 'M\u00F8tested';
   };
   attributes: {
-    Bilde1: Attribute.Media<'images'> & Attribute.Required;
-    Bilde2: Attribute.Media<'images'> & Attribute.Required;
-    Bilde3: Attribute.Media<'images'> & Attribute.Required;
-    Bilde4: Attribute.Media<'images'> & Attribute.Required;
-    Bilde5: Attribute.Media<'images'> & Attribute.Required;
-    Tekst: Attribute.RichText;
-    Tittel: Attribute.String;
+    Bilde1: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
+    Bilde2: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
+    Bilde3: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
+    Bilde4: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
+    Bilde5: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
+    Tekst: Schema.Attribute.RichText;
+    Tittel: Schema.Attribute.String;
   };
 }
 
-export interface HjemOmInnehaverne extends Schema.Component {
+export interface HjemOmInnehaverne extends Struct.ComponentSchema {
   collectionName: 'components_hjem_om_innehavernes';
   info: {
     displayName: 'Om innehaverne';
   };
   attributes: {
-    Tekst: Attribute.RichText;
-    Tittel: Attribute.String;
+    Tekst: Schema.Attribute.RichText;
+    Tittel: Schema.Attribute.String;
   };
 }
 
-export interface HjemReferanse extends Schema.Component {
+export interface HjemReferanse extends Struct.ComponentSchema {
   collectionName: 'components_hjem_referanses';
   info: {
     displayName: 'Referanse';
   };
   attributes: {
-    Bilde: Attribute.Media<'images'> & Attribute.Required;
-    Tittel: Attribute.String & Attribute.Required;
+    Bilde: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
+    Tittel: Schema.Attribute.String & Schema.Attribute.Required;
   };
 }
 
-export interface HjemReferanseoversikt extends Schema.Component {
+export interface HjemReferanseoversikt extends Struct.ComponentSchema {
   collectionName: 'components_hjem_referanseoversikts';
   info: {
     displayName: 'Referanseoversikt';
   };
   attributes: {
-    Tittel: Attribute.String & Attribute.Required;
+    Tittel: Schema.Attribute.String & Schema.Attribute.Required;
   };
 }
 
-export interface HjemTjeneste extends Schema.Component {
+export interface HjemTjeneste extends Struct.ComponentSchema {
   collectionName: 'components_hjem_tjenestes';
   info: {
     displayName: 'Tjeneste';
   };
   attributes: {
-    Beskrivelse: Attribute.Text;
-    Ikon: Attribute.Media<'images'> & Attribute.Required;
-    Tittel: Attribute.String & Attribute.Required;
+    Beskrivelse: Schema.Attribute.Text;
+    Ikon: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
+    Tittel: Schema.Attribute.String & Schema.Attribute.Required;
   };
 }
 
-export interface HjemTjenesteoversikt extends Schema.Component {
+export interface HjemTjenesteoversikt extends Struct.ComponentSchema {
   collectionName: 'components_hjem_tjenesteoversikts';
   info: {
     displayName: 'Tjenesteoversikt';
   };
   attributes: {
-    Tittel: Attribute.String & Attribute.Required;
+    Tittel: Schema.Attribute.String & Schema.Attribute.Required;
   };
 }
 
-export interface KalenderDato extends Schema.Component {
+export interface KalenderDato extends Struct.ComponentSchema {
   collectionName: 'components_kalender_datoes';
   info: {
     displayName: 'Dato';
   };
   attributes: {
-    Dato: Attribute.Integer;
-    Tekst: Attribute.Text;
+    Dato: Schema.Attribute.Integer;
+    Tekst: Schema.Attribute.Text;
   };
 }
 
-export interface KomponenterBildeFullbredde extends Schema.Component {
+export interface KomponenterBildeFullbredde extends Struct.ComponentSchema {
   collectionName: 'components_komponenter_bilde_fullbreddes';
   info: {
     displayName: 'Bilde_fullbredde';
   };
   attributes: {
-    Bilde: Attribute.Media<'images'> & Attribute.Required;
+    Bilde: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
   };
 }
 
-export interface KomponenterTekstEnspalte extends Schema.Component {
+export interface KomponenterTekstEnspalte extends Struct.ComponentSchema {
   collectionName: 'components_komponenter_tekst_enspaltes';
   info: {
     displayName: 'Tekst_enspalte';
   };
   attributes: {
-    Tekst: Attribute.RichText;
-    Tittel: Attribute.String;
+    Tekst: Schema.Attribute.RichText;
+    Tittel: Schema.Attribute.String;
   };
 }
 
-export interface KomponenterTopp extends Schema.Component {
+export interface KomponenterTopp extends Struct.ComponentSchema {
   collectionName: 'components_komponenter_topps';
   info: {
     description: '';
     displayName: 'Topp';
   };
   attributes: {
-    Bakgrunnsbilde: Attribute.Media<'images'> & Attribute.Required;
-    Beskrivelse: Attribute.Text;
-    Tittel: Attribute.String & Attribute.Required;
+    Bakgrunnsbilde: Schema.Attribute.Media<'images'> &
+      Schema.Attribute.Required;
+    Beskrivelse: Schema.Attribute.Text;
+    Tittel: Schema.Attribute.String & Schema.Attribute.Required;
   };
 }
 
-export interface LeverandorerLeverandor extends Schema.Component {
+export interface LeverandorerLeverandor extends Struct.ComponentSchema {
   collectionName: 'components_leverandorer_leverandors';
   info: {
     displayName: 'Leverandor';
   };
   attributes: {
-    Bilde: Attribute.Media<'images'> & Attribute.Required;
-    Lenke_til_leverandor: Attribute.String;
-    Tekst: Attribute.RichText;
-    Tittel: Attribute.String & Attribute.Required;
+    Bilde: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
+    Lenke_til_leverandor: Schema.Attribute.String;
+    Tekst: Schema.Attribute.RichText;
+    Tittel: Schema.Attribute.String & Schema.Attribute.Required;
   };
 }
 
-export interface MenyVare extends Schema.Component {
+export interface MenyVare extends Struct.ComponentSchema {
   collectionName: 'components_meny_vares';
   info: {
     description: '';
     displayName: 'vare';
   };
   attributes: {
-    Beskrivelse: Attribute.RichText;
-    Bilde: Attribute.Media<'images'>;
-    Pris: Attribute.Integer;
-    Tittel: Attribute.String & Attribute.Required;
+    Beskrivelse: Schema.Attribute.RichText;
+    Bilde: Schema.Attribute.Media<'images'>;
+    Pris: Schema.Attribute.Integer;
+    Tittel: Schema.Attribute.String & Schema.Attribute.Required;
   };
 }
 
-export interface MetadataMeta extends Schema.Component {
+export interface MetadataMeta extends Struct.ComponentSchema {
   collectionName: 'components_metadata_metas';
   info: {
     description: '';
     displayName: 'Meta';
   };
   attributes: {
-    Metabeskrivelse: Attribute.Text;
-    Metabilde: Attribute.Media<'images', true>;
-    Metatittel: Attribute.String;
+    Metabeskrivelse: Schema.Attribute.Text;
+    Metabilde: Schema.Attribute.Media<'images', true>;
+    Metatittel: Schema.Attribute.String;
   };
 }
 
-export interface MetadataMetadata extends Schema.Component {
+export interface MetadataMetadata extends Struct.ComponentSchema {
   collectionName: 'components_metadata_metadata';
   info: {
     displayName: 'metadata';
     icon: 'search';
   };
   attributes: {
-    Metabeskrivelse: Attribute.String;
-    Metabilde: Attribute.Media<'images' | 'files' | 'videos' | 'audios', true>;
-    Metatittel: Attribute.String;
+    Metabeskrivelse: Schema.Attribute.String;
+    Metabilde: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios',
+      true
+    >;
+    Metatittel: Schema.Attribute.String;
   };
 }
 
-export interface OmBilderad extends Schema.Component {
+export interface OmBilderad extends Struct.ComponentSchema {
   collectionName: 'components_om_bilderads';
   info: {
     displayName: 'Bilderad';
   };
   attributes: {
-    Bilde1: Attribute.Media<'images'> & Attribute.Required;
-    Bilde2: Attribute.Media<'images'> & Attribute.Required;
-    Bilde3: Attribute.Media<'images'> & Attribute.Required;
+    Bilde1: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
+    Bilde2: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
+    Bilde3: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
   };
 }
 
-export interface OmTekst extends Schema.Component {
+export interface OmTekst extends Struct.ComponentSchema {
   collectionName: 'components_om_teksts';
   info: {
     displayName: 'Tekst';
   };
   attributes: {
-    Tekst_enspalte: Attribute.RichText;
+    Tekst_enspalte: Schema.Attribute.RichText;
   };
 }
 
-export interface OmTekstMedSitat extends Schema.Component {
+export interface OmTekstMedSitat extends Struct.ComponentSchema {
   collectionName: 'components_om_tekst_med_sitats';
   info: {
     displayName: 'Tekst_med_sitat';
   };
   attributes: {
-    Bilde: Attribute.Media<'images'>;
-    Sitat: Attribute.Text;
-    Tekst: Attribute.RichText;
-    Venstrejustert: Attribute.Boolean & Attribute.DefaultTo<true>;
+    Bilde: Schema.Attribute.Media<'images'>;
+    Sitat: Schema.Attribute.Text;
+    Tekst: Schema.Attribute.RichText;
+    Venstrejustert: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<true>;
   };
 }
 
-export interface OmTekstPaBilde extends Schema.Component {
+export interface OmTekstPaBilde extends Struct.ComponentSchema {
   collectionName: 'components_om_tekst_pa_bildes';
   info: {
     displayName: 'Tekst_p\u00E5_bilde';
   };
   attributes: {
-    Bilde: Attribute.Media<'images'> & Attribute.Required;
-    Tekst: Attribute.RichText;
+    Bilde: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
+    Tekst: Schema.Attribute.RichText;
   };
 }
 
-export interface OmTekstTospalte extends Schema.Component {
+export interface OmTekstTospalte extends Struct.ComponentSchema {
   collectionName: 'components_om_tekst_tospaltes';
   info: {
     displayName: 'Tekst_tospalte';
   };
   attributes: {
-    Tekst: Attribute.RichText;
+    Tekst: Schema.Attribute.RichText;
   };
 }
 
-export interface OmToppbilde extends Schema.Component {
+export interface OmToppbilde extends Struct.ComponentSchema {
   collectionName: 'components_om_toppbildes';
   info: {
     displayName: 'Toppbilde';
   };
   attributes: {
-    Bakgrunnsbilde: Attribute.Media<'images'> & Attribute.Required;
-    Tittel: Attribute.String & Attribute.Required;
+    Bakgrunnsbilde: Schema.Attribute.Media<'images'> &
+      Schema.Attribute.Required;
+    Tittel: Schema.Attribute.String & Schema.Attribute.Required;
   };
 }
 
-export interface OmUthevet extends Schema.Component {
+export interface OmUthevet extends Struct.ComponentSchema {
   collectionName: 'components_om_uthevets';
   info: {
     displayName: 'Uthevet';
   };
   attributes: {
-    Bilde: Attribute.Media<'images'> & Attribute.Required;
-    Tekst: Attribute.RichText;
-    Tittel: Attribute.String;
+    Bilde: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
+    Tekst: Schema.Attribute.RichText;
+    Tittel: Schema.Attribute.String;
   };
 }
 
-export interface TekstTekst extends Schema.Component {
+export interface TekstTekst extends Struct.ComponentSchema {
   collectionName: 'components_tekst_teksts';
   info: {
     description: '';
@@ -279,16 +284,16 @@ export interface TekstTekst extends Schema.Component {
     icon: 'feather';
   };
   attributes: {
-    beskrivelse: Attribute.RichText;
-    Bilde: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
-    Fil: Attribute.Media<'images' | 'videos' | 'audios' | 'files'>;
-    Tittel: Attribute.String;
+    beskrivelse: Schema.Attribute.RichText;
+    Bilde: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    Fil: Schema.Attribute.Media<'images' | 'videos' | 'audios' | 'files'>;
+    Tittel: Schema.Attribute.String;
   };
 }
 
-declare module '@strapi/types' {
-  export module Shared {
-    export interface Components {
+declare module '@strapi/strapi' {
+  export module Public {
+    export interface ComponentSchemas {
       'hjem.hero': HjemHero;
       'hjem.menyoversikt': HjemMenyoversikt;
       'hjem.motested': HjemMotested;
